@@ -17,4 +17,10 @@ filtered_list = it.filterfalse(lambda x: sum(get_factors(x)) != x, candidates)
 for i in filtered_list:
     print("Perfect number: {} - Divisors: {}".format(i, get_factors(i)))
 
-
+def check_if_has_dividers(x):
+    
+    for i in range(2, x):
+        if x % i == 0:
+            return True
+    else:
+        return False
